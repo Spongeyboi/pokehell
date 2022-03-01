@@ -34,6 +34,18 @@
 	<haxelib name="flixel-addons" />
 	<haxelib name="flixel-ui" />
 	
+	<!-- <define name="PRELOAD_ALL" /> -->
+	<define name="PRELOAD_ALL" unless="web" />
+	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
+	
+	<section if="PRELOAD_ALL">
+		<library name="shared"   preload="true" />
+	</section>
+	
+	<section if="NO_PRELOAD_ALL">
+		<library name="shared"   preload="false" />
+	</section>
+	
 	
 	<!-----Haxe----->
 	<!--Disable the Flixel core focus lost screen-->
