@@ -4,10 +4,13 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.graphics.frames.FlxAtlasFrames;
+import openfl.Assets;
 
 class PlayState extends FlxState
 {
-    var eevee:FlxSprite;
+    public static var eevee:FlxSprite;
+
+    var canMove:Bool == true;
 
     override public function create()
     {
@@ -27,5 +30,13 @@ class PlayState extends FlxState
     override public function update(elapsed:Float)
     {
         super.update(elapsed);
+
+        var wannaMove:Bool = FlxG.keys.pressed.LEFT || FlxG.keys.pressed.RIGHT || FlxG.keys.pressed.UP || FlxG.keys.pressed.DOWN;
+
+        if (wannaMove && canMove){
+            eevee.animation.play('walk');
+        }else{
+            eevee.animation.play('idle');
+        }
     }
 }
