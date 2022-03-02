@@ -40,8 +40,8 @@ jobs:
           haxelib install lime --quiet
           haxelib install openfl --quiet
           haxelib --never install flixel --quiet
-          haxelib run lime setup flixel 
-          haxelib run lime setup
+          haxelib run lime setup flixel --quiet
+          haxelib run lime setup --quiet
           haxelib install flixel-tools --quiet
           haxelib install flixel-ui --quiet
           haxelib install flixel-addons --quiet
