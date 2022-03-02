@@ -13,7 +13,7 @@ class PlayState extends FlxState
       
         eevee = new FlxSprite(-150, -100);
         eevee.screenCenter();
-		eevee.frames = return FlxAtlasFrames.fromSparrow('assets/shared/images/char/eevee.png',Assets.getText('assets/shared/images/char/eevee.xml');
+		eevee.frames = return FlxAtlasFrames.fromSparrow('assets/shared/images/char/eevee.png',Assets.getText('assets/shared/images/char/eevee.xml'));
 		eevee.antialiasing = true;
 		eevee.animation.addByPrefix('idle', 'idle', 24);
 		eevee.animation.addByPrefix('walk', 'walk', 24);
