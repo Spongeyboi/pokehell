@@ -5,12 +5,13 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.Assets;
+import flixel.math.FlxPoint;
 
 class PlayState extends FlxState
 {
     var eevee:Player;
 
-     static inline var SPEED:Float = 200;
+    static inline var SPEED:Float = 200;
     
 
     override public function create()
@@ -19,7 +20,7 @@ class PlayState extends FlxState
 
         eevee = new Player(20, 20);
         add(eevee);
-        drag.x = drag.y = 1600;
+        eevee.drag.x = eevee.drag.y = 1600;
     }
 
      function updateMovement()
@@ -41,8 +42,8 @@ class PlayState extends FlxState
         
             if (up || down || left || right)
             {
-                velocity.x = speed;
-                velocity.y = speed;
+                eevee.velocity.x = speed;
+                eevee.velocity.y = speed;
 
                 var newAngle:Float = 0;
                 if (up)
@@ -66,8 +67,8 @@ class PlayState extends FlxState
                 else if (right)
                     newAngle = 0;
 
-                velocity.set(SPEED, 0);
-                velocity.rotate(FlxPoint.weak(0, 0), newAngle);
+                eevee.velocity.set(SPEED, 0);
+                eevee.velocity.rotate(FlxPoint.weak(0, 0), newAngle);
             }
     }
 
