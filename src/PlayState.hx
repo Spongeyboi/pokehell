@@ -7,6 +7,8 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 class PlayState extends FlxState
 {
+    var eevee:FlxSprite;
+
     override public function create()
     {
         super.create();
