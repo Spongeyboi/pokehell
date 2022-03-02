@@ -29,7 +29,7 @@ class TitleState extends FlxState
          playButton = new FlxButton(0, 0, "Play", function(){
              FlxG.switchState(new PlayState());
          });
-         playButton.y -= 50
+         playButton.y -= 50;
          
          playButton.screenCenter();
          add(playButton);
