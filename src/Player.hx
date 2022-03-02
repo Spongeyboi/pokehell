@@ -1,5 +1,7 @@
  package;
 
+ import lime.utils.Assets;
+
  import flixel.FlxG;
  import flixel.FlxSprite;
  import flixel.math.FlxPoint;
