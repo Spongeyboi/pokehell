@@ -11,8 +11,8 @@
 	<SubTexture name="idle0005" x="150" y="0" width="150" height="173"/>
 	<SubTexture name="walk0000" x="0" y="0" width="150" height="173"/>
 	<SubTexture name="walk0001" x="0" y="0" width="150" height="173"/>
-	<SubTexture name="walk0002" x="450" y="0" width="150" height="173"/>
-	<SubTexture name="walk0003" x="450" y="0" width="163" height="188"/>
+	<SubTexture name="walk0003" x="305" y="0" width="163" height="188"/>
+	<SubTexture name="walk0003" x="305" y="0" width="163" height="188"/>
     
 
 </TextureAtlas>
