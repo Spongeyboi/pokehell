@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxState;
 import flixel.FlxSprite;
+import flixel.FlxColor;
 import flixel.FlxG;
 
 class TitleState extends FlxState
