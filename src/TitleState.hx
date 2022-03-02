@@ -5,9 +5,12 @@ import flixel.FlxState;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
 import flixel.FlxG;
+import flixel.ui.FlxButton;
 
 class TitleState extends FlxState
 {
+    var playButton:FlxButton;
+
     override public function create()
     {
         super.create();
@@ -22,6 +25,13 @@ class TitleState extends FlxState
         logo.screenCenter();
         logo.antialiasing = true;
         add(logo);
+
+         playButton = new FlxButton(0, 0, "Play", function(){
+             FlxG.switchState(new PlayState());
+         });
+         
+         playButton.screenCenter();
+         add(playButton);
     }
 
     override public function update(elapsed:Float)

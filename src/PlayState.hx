@@ -8,35 +8,17 @@ import openfl.Assets;
 
 class PlayState extends FlxState
 {
-    var eevee:FlxSprite;
-
-    var canMove:Bool = true;
-
+    var eevee:Player;
     override public function create()
     {
         super.create();
-      
-        eevee = new FlxSprite(-150, -100);
-        eevee.screenCenter();
-		eevee.frames = FlxAtlasFrames.fromSparrow('assets/shared/images/char/eevee.png',Assets.getText('assets/shared/images/char/eevee.xml'));
-		eevee.antialiasing = true;
-		eevee.animation.addByPrefix('idle', 'idle', 24);
-		eevee.animation.addByPrefix('walk', 'walk', 24);
-		eevee.animation.play('idle');
-		eevee.updateHitbox();
+
+        eevee = new Player(20, 20);
         add(eevee);
     }
 
     override public function update(elapsed:Float)
     {
         super.update(elapsed);
-
-        var wannaMove:Bool = FlxG.keys.pressed.LEFT || FlxG.keys.pressed.RIGHT || FlxG.keys.pressed.UP || FlxG.keys.pressed.DOWN;
-
-        if (wannaMove && canMove){
-            eevee.animation.play('walk');
-        }else{
-            eevee.animation.play('idle');
-        }
     }
 }
