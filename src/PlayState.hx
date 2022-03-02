@@ -14,7 +14,7 @@ class PlayState extends FlxState
     override function update(elapsed:Float)
     {
         super.update(elapsed);
-        player = new Player(20, 20);
-        add(player);
+        eevee = new Player(20, 20);
+        add(eevee);
     }
 }
