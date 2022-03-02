@@ -10,7 +10,7 @@ class PlayState extends FlxState
 {
     var eevee:FlxSprite;
 
-    var canMove:Bool == true;
+    var canMove:Bool = true;
 
     override public function create()
     {
