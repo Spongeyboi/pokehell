@@ -16,7 +16,7 @@ class TitleState extends FlxState
         // bg.updateHitbox();
         add(bg);
       
-        var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('title'));
+        var logo:FlxSprite = new FlxSprite().loadGraphic('assets/images/title.png');
         logo.screenCenter();
         logo.antialiasing = true;
     }
