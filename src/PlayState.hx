@@ -8,7 +8,7 @@ import openfl.Assets;
 
 class PlayState extends FlxState
 {
-    public static var eevee:FlxSprite;
+    var eevee:FlxSprite;
 
     var canMove:Bool == true;
 
