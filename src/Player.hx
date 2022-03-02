@@ -4,8 +4,9 @@
  import flixel.FlxSprite;
  import flixel.math.FlxPoint;
  import flixel.util.FlxColor;
- import flixel.util.FlxAtlasFrames;
- 
+ import flixel.graphics.frames.FlxAtlasFrames;
+
+
  class Player extends FlxSprite
  {
      static inline var SPEED:Float = 200;
