@@ -1,5 +1,6 @@
 package;
 
+import flixel.FlxG;
 import flixel.FlxState;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
@@ -20,10 +21,17 @@ class TitleState extends FlxState
         var logo:FlxSprite = new FlxSprite().loadGraphic('assets/images/title.png');
         logo.screenCenter();
         logo.antialiasing = true;
+        add(logo);
     }
 
     override public function update(elapsed:Float)
     {
         super.update(elapsed);
+
+        var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;
+
+        if (pressedEnter){
+            FlxG.switchState(new PlayState());
+        }
     }
 }
