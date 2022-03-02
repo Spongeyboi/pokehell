@@ -18,7 +18,7 @@
      {
          super(x, y);
          loadGraphic('assets/shared/images/char/eevee.png', true, 16, 16);
-         frames = FlxAtlasFrames.fromSparrow('assets/shared/images/char/eevee.png', Assets.getText('assets/shared/images/char/eevee.xml'));
+         frames = FlxAtlasFrames.fromSparrow('assets/shared/images/char/eevee.png', Assets.getText('images/char/eevee.xml','shared'));
          drag.x = drag.y = 1600;
          animation.addByPrefix('idle', 'idle', 24);
          animation.addByPrefix('walk', 'walk', 24);
