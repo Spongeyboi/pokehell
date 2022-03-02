@@ -37,14 +37,14 @@ jobs:
       - name: Install haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib install lime
-          haxelib install openfl
-          haxelib --never install flixel
-          haxelib run lime setup flixel
+          haxelib install lime --quiet
+          haxelib install openfl --quiet
+          haxelib --never install flixel --quiet
+          haxelib run lime setup flixel 
           haxelib run lime setup
-          haxelib install flixel-tools
-          haxelib install flixel-ui
-          haxelib install flixel-addons
+          haxelib install flixel-tools --quiet
+          haxelib install flixel-ui --quiet
+          haxelib install flixel-addons --quiet
           
       # Compile the game
       - name: Compile the game
