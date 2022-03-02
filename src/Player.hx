@@ -4,6 +4,7 @@
  import flixel.FlxSprite;
  import flixel.math.FlxPoint;
  import flixel.util.FlxColor;
+ import flixel.graphics.frames;
 
  class Player extends FlxSprite
  {
@@ -13,9 +14,11 @@
      public function new(x:Float = 0, y:Float = 0)
      {
          super(x, y);
-         makeGraphic(16, 16, FlxColor.BLUE);
+         loadGraphic('assets/shared/images/char/eevee.png', true, 16, 16);
+         frames = FlxAtlasFrames.fromSparrow('assets/shared/images/char/eevee.png', Assets.getText('assets/shared/images/char/eevee.xml'))
          drag.x = drag.y = 1600;
-
+         animation.addByPrefix('idle', 'idle', 24);
+         animation.addByPrefix('walk', 'walk', 24);
      }
 
      function updateMovement()
@@ -45,6 +48,7 @@
                     newAngle -= 45;
                 else if (right)
                     newAngle += 45;
+                facing = UP;
             }
             else if (down)
             {
@@ -53,16 +57,41 @@
                     newAngle += 45;
                 else if (right)
                     newAngle -= 45;
+                facing = DOWN;
             }
             else if (left)
+            {
                 newAngle = 180;
+                facing = LEFT;
+            }
             else if (right)
+            {
                 newAngle = 0;
+                facing = RIGHT;
+            }
 
-             velocity.set(SPEED, 0);
-             velocity.rotate(FlxPoint.weak(0, 0), newAngle);
+            // determine our velocity based on angle and speed
+            velocity.set(SPEED, 0);
+            velocity.rotate(FlxPoint.weak(0, 0), newAngle);
+
+            // if the player is moving (velocity is not 0 for either axis), we need to change the animation to match their facing
+            if ((velocity.x != 0 || velocity.y != 0) && touching == NONE) 
+            {
+                switch (facing)
+                {
+                    case LEFT, RIGHT:
+                        animation.play("walk");
+                    case UP:
+                        animation.play("walk");
+                    case DOWN:
+                        animation.play("walk");
+                    case _:
+                }
+            }
 
 
+         }else{
+             animation.play('idle');
          }
      }
 
