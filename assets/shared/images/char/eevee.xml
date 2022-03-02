@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NOTE_assets.png">
+    <!-- Not created with Adobe Animate version 20.0.0.17400 -->
+    <!-- I used my fkin' hands bruh ~spongey -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="0" y="0" width="150" height="173"/>
+	<SubTexture name="idle0001" x="0" y="0" width="150" height="173"/>
+	<SubTexture name="idle0002" x="0" y="0" width="150" height="173"/>
+	<SubTexture name="idle0003" x="150" y="0" width="150" height="173"/>
+	<SubTexture name="idle0004" x="150" y="0" width="150" height="173"/>
+	<SubTexture name="idle0005" x="150" y="0" width="150" height="173"/>
+	<SubTexture name="walk0000" x="0" y="0" width="150" height="173"/>
+	<SubTexture name="walk0001" x="0" y="0" width="150" height="173"/>
+	<SubTexture name="walk0002" x="450" y="0" width="150" height="173"/>
+	<SubTexture name="walk0003" x="450" y="0" width="163" height="188"/>
+    
+
+</TextureAtlas>
